@@ -24,6 +24,9 @@ public class PedidoController {
 	@Autowired
 	private PedidoService pedidoService;
 	
+	// SPRING SLEUTH AJUDA  AGENTE A ACOMPANHAR LOGS, ELE CARREGA UM ID DA TRANSACAO POR TODOS OS DEMAIS MICRO SERVICOS
+	// ATE COMPLETAR A TRANSACAO
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public Pedido realizaPedido(@RequestBody List<ItemDoPedidoRequest> produtos) {
 		LOG.info("Pedido recebido");
